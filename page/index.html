@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Counter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+  .main-content {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+  }
+  </style>
+  <script type="text/javascript">
+    function countUp() {
+      const countElem = document.getElementById('count');
+      let count = Number(countElem.innerText);
+      countElem.innerText = ++count;
+    }
+
+    function countDown() {
+      const countElem = document.getElementById('count');
+      let count = Number(countElem.innerText);
+      countElem.innerText = --count;
+    }
+  </script>
+</head>
+<body>
+  <div class="main-content">
+    <h1>Counting</h1>
+    <p>Help you count if you can't</p>
+    <h2 id="count">0</h2>
+    <button onclick="countDown()"> - </button>
+    <button onclick="countUp()"> + </button>
+  </div>
+</body>
+</html>
